@@ -14,6 +14,11 @@ body {
     height: auto;
 }
 
+.logo-sm {
+    max-width: 300px;
+    height: auto;
+}
+
 /* Game */
 .game {
     background:rgba(128, 128, 128, 0.0);
@@ -141,6 +146,16 @@ body {
 }
 
 .top-8 {
-    font-size: 1.5em;
+    font-size: 4em;
+    font-weight: bolder;
+}
+
+.bottom-scores {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.title {
+    font-size: 4em;
     font-weight: bolder;
 }

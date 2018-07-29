@@ -159,3 +159,22 @@ body {
     font-size: 4em;
     font-weight: bolder;
 }
+
+.finals {
+    font-family: 'Joti One', monospace;
+}
+
+.finals td{
+    font-size: 1.8em;
+    font-weight: lighter;
+}
+
+.finals th{
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+.finals th.place{
+    font-size: 1.8em;
+    font-weight: bolder;
+}

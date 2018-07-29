@@ -84,9 +84,9 @@ body::after {
     width: 400%;
     height: 400%;
     opacity: 0.8;
-    background: -moz-linear-gradient(-45deg, #3c72df, #1A50BC, #90afee, #90afef);
-    background: -webkit-linear-gradient(-45deg, #3c72df, #1A50BC, #90afee, #90afef);
-    background: linear-gradient(-45deg, #3c72df, #1A50BC, #90afee, #90afef);
+    background: -moz-linear-gradient(-45deg, #3c72df, #1A50BC, #6082ee, #6497ff);
+    background: -webkit-linear-gradient(-45deg, #3c72df, #1A50BC, #6082ee, #6497ff);
+    background: linear-gradient(-45deg, #3c72df, #1A50BC, #6082ee, #6497ff);
     -webkit-animation: gradient_transition 15s ease infinite;
     -moz-animation: gradient_transition 15s ease infinite;
     -o-animation: gradient_transition 15s ease infinite;

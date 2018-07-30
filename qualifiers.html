@@ -16,6 +16,49 @@
 
     <link rel="stylesheet" href="css/bg-qualifiers.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(drawSheetName);
+
+        function drawSheetName() {
+            var queryString = encodeURIComponent('SELECT A, B');
+            var magicIncantation = '/gviz/tq?gid=0&headers=1&tq=';
+
+            var query = new google.visualization.Query(
+                'https://docs.google.com/spreadsheets/d/10HvQYrpee23-yybXt5CqJu9lVkg3RhZEVIzMQQwjGhQ' +
+                magicIncantation + queryString);
+            query.send(handleSampleDataQueryResponse);
+
+        }
+
+        function handleSampleDataQueryResponse(response) {
+            if (response.isError()) {
+                alert('ERROR: unable to load scores, Please refresh');
+                return;
+            }
+
+            var data = response.getDataTable();
+            var leaderboard = [];
+            for (i = 0; i < data.getNumberOfRows() ; i++) {
+                leaderboard[i] = {
+                    "name": data.getValue(i, 0),
+                    "score": data.getValue(i, 1)
+                }
+            }
+
+            leaderboard.forEach(function (player, index) {
+                if (document.querySelector(".place-" + eval(index+1)) === null) {
+                    return;
+                }
+
+                document.querySelector(".place-" + eval(index+1) + " .name i").innerHTML = player.name;
+                document.querySelector(".place-" + eval(index+1) + " .score i").innerHTML = player.score;
+            });
+        }
+    </script>
 </head>
 <body id="qualifiers-page">
 <div class="container-fluid">
@@ -40,25 +83,25 @@
         <div class="col text-left">
             <table class="table top-8">
                 <tbody>
-                <tr>
+                <tr class="place-1">
                     <th scope="row">1</th>
-                    <td><i class="sonic-running">PO_PPO</i></td>
-                    <td><i class="coin-wrap">142</i></td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-2">
                     <th scope="row">2</th>
-                    <td><i class="sonic-running">BJB_BJ</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-3">
                     <th scope="row">3</th>
-                    <td><i class="sonic-running">CFC_CF</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-4">
                     <th scope="row">4</th>
-                    <td><i class="sonic-running">WPW_WP</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
                 </tbody>
             </table>
@@ -66,25 +109,25 @@
         <div class="col text-text-left">
             <table class="table top-8">
                 <tbody>
-                <tr>
+                <tr class="place-5">
                     <th scope="row">5</th>
-                    <td><i class="sonic-running">CN_CCN</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-6">
                     <th scope="row">6</th>
-                    <td><i class="sonic-running">CGC_CG</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-7">
                     <th scope="row">7</th>
-                    <td><i class="sonic-running">HA_HHA</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-8">
                     <th scope="row">8</th>
-                    <td><i class="sonic-running">OVO_OV</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
                 </tbody>
             </table>
@@ -96,25 +139,25 @@
         <div class="col text-left">
             <table class="table table-sm bottom-scores">
                 <tbody>
-                <tr>
+                <tr class="place-9">
                     <th scope="row">9</th>
-                    <td><i class="sonic-running">PO_PPO</i></td>
-                    <td><i class="coin-wrap">142</i></td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-10">
                     <th scope="row">10</th>
-                    <td><i class="sonic-running">BJB_BJ</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-11">
                     <th scope="row">11</th>
-                    <td><i class="sonic-running">PO_PPO</i></td>
-                    <td><i class="coin-wrap">142</i></td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-12">
                     <th scope="row">12</th>
-                    <td><i class="sonic-running">BJB_BJ</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
                 </tbody>
             </table>
@@ -122,25 +165,25 @@
         <div class="col text-left">
             <table class="table table-sm bottom-scores">
                 <tbody>
-                <tr>
+                <tr class="place-13">
                     <th scope="row">13</th>
-                    <td><i class="sonic-running">CN_CCN</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-14">
                     <th scope="row">14</th>
-                    <td><i class="sonic-running">CGC_CG</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-15">
                     <th scope="row">15</th>
-                    <td><i class="sonic-running">CN_CCN</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr>
+                <tr class="place-16">
                     <th scope="row">16</th>
-                    <td><i class="sonic-running">CGC_CG</i></td>
-                    <td class="coin-wrap">142</td>
+                    <td class="name"><i class="sonic-running">---</i></td>
+                    <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
                 </tbody>
             </table>

@@ -43,18 +43,23 @@
             var data = response.getDataTable();
             var leaderboard = [];
             var names = [];
-            for (i = 0; i < data.getNumberOfRows() ; i++) {
+            var leaderboard_index = 0;
+            for (i = 0; i < data.getNumberOfRows(); i++) {
                 var rname = data.getValue(i, 0);
                 var rscore = data.getValue(i, 1);
 
                 if (names.includes(rname) !== true) {
                     names.push(rname);
-                    leaderboard[i] = {
+                    leaderboard[leaderboard_index] = {
                         "name": rname,
                         "score": rscore
-                    }
+                    };
+
+                    leaderboard_index++;
                 }
             }
+
+            console.log(leaderboard);
 
             leaderboard.forEach(function (player, index) {
                 if (document.querySelector(".place-" + eval(index+1)) === null) {

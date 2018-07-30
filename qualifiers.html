@@ -42,10 +42,17 @@
 
             var data = response.getDataTable();
             var leaderboard = [];
+            var names = [];
             for (i = 0; i < data.getNumberOfRows() ; i++) {
-                leaderboard[i] = {
-                    "name": data.getValue(i, 0),
-                    "score": data.getValue(i, 1)
+                var rname = data.getValue(i, 0);
+                var rscore = data.getValue(i, 1);
+
+                if (names.includes(rname) !== true) {
+                    names.push(rname);
+                    leaderboard[i] = {
+                        "name": rname,
+                        "score": rscore
+                    }
                 }
             }
 

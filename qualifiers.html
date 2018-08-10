@@ -60,12 +60,12 @@
             }
 
             leaderboard.forEach(function (player, index) {
-                if (document.querySelector(".place-" + eval(index+1)) === null) {
+                if (document.querySelector(".place-" + eval(index + 1)) === null) {
                     return;
                 }
 
-                document.querySelector(".place-" + eval(index+1) + " .name i").innerHTML = player.name;
-                document.querySelector(".place-" + eval(index+1) + " .score i").innerHTML = player.score;
+                document.querySelector(".place-" + eval(index + 1) + " .name i").innerHTML = player.name;
+                document.querySelector(".place-" + eval(index + 1) + " .score i").innerHTML = player.score;
             });
         }
     </script>
@@ -74,19 +74,23 @@
 <div class="container-fluid">
     <div class="row mb-5">
         <div class="col text-left">
-            <img class="logo-sm img-fluid mx-auto d-block" src="img/logo-2018.png">
+            <a href="index.html">
+                <img class="logo-sm img-fluid mx-auto d-block" src="img/logo-2018.png">
+            </a>
         </div>
         <div class="col text-center">
             <h1 class="title">Qualifiers: Sonic 2</h1>
             <h4>Stage 1 Rings (Death ends run)</h4>
             <p><i>RetroWorldChampionships.com</i>
                 <br/>
-                <i>#GameOnExproAZ</i>
+                <a href="https://twitter.com/#GameOnExpoAz"><i>#GameOnExpoAZ</i></a>
             </p>
             <h2>Top 8 Move to Finals</h2>
         </div>
         <div class="col text-right">
-            <img class="logo-sm img-fluid mx-auto d-block" src="img/logo-2018.png">
+            <a href="index.html">
+                <img class="logo-sm img-fluid mx-auto d-block" src="img/logo-2018.png">
+            </a>
         </div>
     </div>
     <div class="row mt-5">

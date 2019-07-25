@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Joti+One');
+
+body {
+    margin: 40px 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+    background-color: #999;
+    background-image: url("../img/bg.png");
+}
+
+/*ID*/
+#logo {
+    width: 600px;
+    height: auto;
+}
+
+.logo-sm {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Game */
+.game {
+    background:rgba(128, 128, 128, 0.0);
+    box-shadow: none;
+    border: none;
+}
+
+.game img {
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 2px;
+    height: 200px;
+    width: 200px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.game img.large {
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 2px;
+    height: 400px;
+    width: 400px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.gold {
+    color: rgba(242,215,50,1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+.silver {
+    color: #F0F0F0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+.bronze {
+    color: rgba(223,182,103,1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+.coin-wrap {
+    font-family: 'Joti One', monospace;
+    font-style: normal;
+}
+
+.coin-wrap::before {
+    display: inline-block;
+    content: "";
+    width: 1em;
+    height: 1em;
+    background: transparent url('../img/coin.gif') no-repeat;
+    background-size:contain;
+    position: relative;
+    top: 5px;
+    left: -2px;
+}
+
+.coin-wrap::after {
+    display: inline-block;
+    content: "";
+    width: 1em;
+    height: 1em;
+    background: transparent url('../img/coin.gif') no-repeat;
+    background-size:contain;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.sonic-running {
+    font-family: 'Joti One', monospace;
+    font-style: normal;
+}
+.sonic-running::before {
+    display: inline-block;
+    content: "";
+    width: 1em;
+    height: 1em;
+    background: transparent url('../img/sonic-running.gif') no-repeat;
+    background-size:contain;
+    position: relative;
+    top: 4px;
+}
+
+.sonic-score-wrap{
+    font-family: 'Joti One', monospace;
+}
+
+.sonic-score-wrap::before {
+    display: inline-block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: transparent url('../img/sonic-running.gif') no-repeat;
+    background-size:contain;
+    position: relative;
+    top: 5px;
+    left: -3px;
+}
+
+.sonic-score-wrap::after {
+    display: inline-block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: transparent url('../img/coin.gif') no-repeat;
+    background-size:contain;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.sonic-name {
+    font-family: 'Joti One', monospace;
+}
+
+#qualifiers-page {
+    font-size: 1em;
+}
+
+.top-8 {
+    font-size: 4em;
+    font-weight: bolder;
+}
+
+.bottom-scores {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.title {
+    font-size: 4em;
+    font-weight: bolder;
+}
+
+.finals {
+    font-family: 'Joti One', monospace;
+}
+
+.finals td{
+    font-size: 1.8em;
+    font-weight: lighter;
+}
+
+.finals th{
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+.finals th.place{
+    font-size: 1.8em;
+    font-weight: bolder;
+}

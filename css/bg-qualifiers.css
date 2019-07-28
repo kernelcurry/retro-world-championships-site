@@ -110,7 +110,7 @@ body {
 }
 
 .top-8 {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bolder;
     border: none;
     max-width: 80%;
@@ -119,10 +119,11 @@ body {
 
 .top-8 td, .top-8 th {
     border:none;
+    padding: 0;
 }
 
 .bottom-scores {
-    font-size: 1.25em;
+    font-size: 2em;
     font-weight: lighter;
     border: none;
     max-width: 60%;
@@ -131,6 +132,7 @@ body {
 
 .bottom-scores td, .bottom-scores th {
     border:none;
+    padding: 0;
 }
 
 .title {

@@ -16,123 +16,6 @@
 
     <link rel="stylesheet" href="css/bg-qualifiers.css">
     <link rel="stylesheet" href="css/main.css">
-
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-
-        google.load("visualization", "1", {packages: ["corechart"]});
-        google.setOnLoadCallback(drawSheetName);
-
-        function drawSheetName() {
-            var queryString = encodeURIComponent('SELECT A, B, C, D, E, F, G');
-            var magicIncantation = '/gviz/tq?gid=0&headers=1&tq=';
-
-            var query = new google.visualization.Query(
-                'https://docs.google.com/spreadsheets/d/1qF_WfVwylQ7BVvm6vsTkuWky6po4MCFJX1I3kY57E1Y' +
-                magicIncantation + queryString);
-            query.send(handleSampleDataQueryResponse);
-
-        }
-
-        function handleSampleDataQueryResponse(response) {
-            if (response.isError()) {
-                alert('ERROR: unable to load scores, Please refresh');
-                return;
-            }
-
-            var data = response.getDataTable();
-            var players = [
-                {
-                    "name": data.getValue(0, 0),
-                    "game_1": data.getValue(0, 1),
-                    "game_2": data.getValue(0, 2),
-                    "game_3": data.getValue(0, 3),
-                    "game_4": data.getValue(0, 4),
-                    "game_5": data.getValue(0, 5),
-                    "total": data.getValue(0, 6)
-                },
-                {
-                    "name": data.getValue(1, 0),
-                    "game_1": data.getValue(1, 1),
-                    "game_2": data.getValue(1, 2),
-                    "game_3": data.getValue(1, 3),
-                    "game_4": data.getValue(1, 4),
-                    "game_5": data.getValue(1, 5),
-                    "total": data.getValue(1, 6)
-                },
-                {
-                    "name": data.getValue(2, 0),
-                    "game_1": data.getValue(2, 1),
-                    "game_2": data.getValue(2, 2),
-                    "game_3": data.getValue(2, 3),
-                    "game_4": data.getValue(2, 4),
-                    "game_5": data.getValue(2, 5),
-                    "total": data.getValue(2, 6)
-                },
-                {
-                    "name": data.getValue(3, 0),
-                    "game_1": data.getValue(3, 1),
-                    "game_2": data.getValue(3, 2),
-                    "game_3": data.getValue(3, 3),
-                    "game_4": data.getValue(3, 4),
-                    "game_5": data.getValue(3, 5),
-                    "total": data.getValue(3, 6)
-                },
-                {
-                    "name": data.getValue(4, 0),
-                    "game_1": data.getValue(4, 1),
-                    "game_2": data.getValue(4, 2),
-                    "game_3": data.getValue(4, 3),
-                    "game_4": data.getValue(4, 4),
-                    "game_5": data.getValue(4, 5),
-                    "total": data.getValue(4, 6)
-                },
-                {
-                    "name": data.getValue(5, 0),
-                    "game_1": data.getValue(5, 1),
-                    "game_2": data.getValue(5, 2),
-                    "game_3": data.getValue(5, 3),
-                    "game_4": data.getValue(5, 4),
-                    "game_5": data.getValue(5, 5),
-                    "total": data.getValue(5, 6)
-                },
-                {
-                    "name": data.getValue(6, 0),
-                    "game_1": data.getValue(6, 1),
-                    "game_2": data.getValue(6, 2),
-                    "game_3": data.getValue(6, 3),
-                    "game_4": data.getValue(6, 4),
-                    "game_5": data.getValue(6, 5),
-                    "total": data.getValue(6, 6)
-                },
-                {
-                    "name": data.getValue(7, 0),
-                    "game_1": data.getValue(7, 1),
-                    "game_2": data.getValue(7, 2),
-                    "game_3": data.getValue(7, 3),
-                    "game_4": data.getValue(7, 4),
-                    "game_5": data.getValue(7, 5),
-                    "total": data.getValue(7, 6)
-                }
-            ];
-
-
-            // Sort Players
-            players.sort(function(a,b) {
-                return a.total < b.total;
-            } );
-
-            players.forEach(function(player, index){
-                document.querySelector(".place-" + eval(index+1) +" .name i").innerHTML = player.name;
-                document.querySelector(".place-" + eval(index+1) +" .game_1 i").innerHTML = player.game_1;
-                document.querySelector(".place-" + eval(index+1) +" .game_2 i").innerHTML = player.game_2;
-                document.querySelector(".place-" + eval(index+1) +" .game_3 i").innerHTML = player.game_3;
-                document.querySelector(".place-" + eval(index+1) +" .game_4 i").innerHTML = player.game_4;
-                document.querySelector(".place-" + eval(index+1) +" .game_5 i").innerHTML = player.game_5;
-                document.querySelector(".place-" + eval(index+1) +" .total i").innerHTML = player.total;
-            });
-        }
-    </script>
 </head>
 <body id="qualifiers-page">
 <div class="container-fluid">
@@ -169,83 +52,83 @@
                 <tbody>
                 <tr class="place-1">
                     <th class=" place" scope="row">1</th>
-                    <td class=" name"><i class="sonic-running">??????</i></td>
-                    <td class=" game_1"><i class="">?</i></td>
-                    <td class=" game_2"><i class="">?</i></td>
-                    <td class=" game_3"><i class="">?</i></td>
-                    <td class=" game_4"><i class="">?</i></td>
-                    <td class=" game_5"><i class="">?</i></td>
-                    <td class=" total"><i class="coin-wrap">?</i></td>
+                    <td class=" name"><i class="sonic-running">BRO3256</i></td>
+                    <td class=" game_1"><i class="">7</i></td>
+                    <td class=" game_2"><i class="">6</i></td>
+                    <td class=" game_3"><i class="">7</i></td>
+                    <td class=" game_4"><i class="">8</i></td>
+                    <td class=" game_5"><i class="">8</i></td>
+                    <td class=" total"><i class="coin-wrap">36</i></td>
                 </tr>
                 <tr class="place-2">
                     <th class=" place" scope="row">2</th>
-                    <td class=" name"><i class="sonic-running">??????</i></td>
-                    <td class=" game_1"><i class="">?</i></td>
-                    <td class=" game_2"><i class="">?</i></td>
-                    <td class=" game_3"><i class="">?</i></td>
-                    <td class=" game_4"><i class="">?</i></td>
-                    <td class=" game_5"><i class="">?</i></td>
-                    <td class=" total"><i class="coin-wrap">?</i></td>
+                    <td class=" name"><i class="sonic-running">PACKIE</i></td>
+                    <td class=" game_1"><i class="">8</i></td>
+                    <td class=" game_2"><i class="">8</i></td>
+                    <td class=" game_3"><i class="">5</i></td>
+                    <td class=" game_4"><i class="">6</i></td>
+                    <td class=" game_5"><i class="">7</i></td>
+                    <td class=" total"><i class="coin-wrap">34</i></td>
                 </tr>
                 <tr class="place-3">
                     <th class=" place" scope="row">3</th>
-                    <td class=" name"><i class="sonic-running">??????</i></td>
-                    <td class=" game_1"><i class="">?</i></td>
-                    <td class=" game_2"><i class="">?</i></td>
-                    <td class=" game_3"><i class="">?</i></td>
-                    <td class=" game_4"><i class="">?</i></td>
-                    <td class=" game_5"><i class="">?</i></td>
-                    <td class=" total"><i class="coin-wrap">?</i></td>
+                    <td class=" name"><i class="sonic-running">CORY</i></td>
+                    <td class=" game_1"><i class="">6</i></td>
+                    <td class=" game_2"><i class="">7</i></td>
+                    <td class=" game_3"><i class="">5</i></td>
+                    <td class=" game_4"><i class="">8</i></td>
+                    <td class=" game_5"><i class="">3</i></td>
+                    <td class=" total"><i class="coin-wrap">29</i></td>
                 </tr>
                 <tr class="place-4">
                     <th class=" place" scope="row">4</th>
-                    <td class=" name"><i class="sonic-running">??????</i></td>
-                    <td class=" game_1"><i class="">?</i></td>
-                    <td class=" game_2"><i class="">?</i></td>
-                    <td class=" game_3"><i class="">?</i></td>
-                    <td class=" game_4"><i class="">?</i></td>
-                    <td class=" game_5"><i class="">?</i></td>
-                    <td class=" total"><i class="coin-wrap">?</i></td>
+                    <td class=" name"><i class="sonic-running">ADRIAN</i></td>
+                    <td class=" game_1"><i class="">5</i></td>
+                    <td class=" game_2"><i class="">5</i></td>
+                    <td class=" game_3"><i class="">8</i></td>
+                    <td class=" game_4"><i class="">4</i></td>
+                    <td class=" game_5"><i class="">6</i></td>
+                    <td class=" total"><i class="coin-wrap">28</i></td>
                 </tr>
                 <tr class="place-5">
                     <th class=" place" scope="row">5</th>
-                    <td class=" name"><i class="sonic-running">??????</i></td>
-                    <td class=" game_1"><i class="">?</i></td>
-                    <td class=" game_2"><i class="">?</i></td>
-                    <td class=" game_3"><i class="">?</i></td>
-                    <td class=" game_4"><i class="">?</i></td>
-                    <td class=" game_5"><i class="">?</i></td>
-                    <td class=" total"><i class="coin-wrap">?</i></td>
+                    <td class=" name"><i class="sonic-running">VEGA</i></td>
+                    <td class=" game_1"><i class="">3</i></td>
+                    <td class=" game_2"><i class="">3</i></td>
+                    <td class=" game_3"><i class="">6</i></td>
+                    <td class=" game_4"><i class="">5</i></td>
+                    <td class=" game_5"><i class="">5</i></td>
+                    <td class=" total"><i class="coin-wrap">22</i></td>
                 </tr>
                 <tr class="place-6">
                     <th class=" place" scope="row">6</th>
-                    <td class=" name"><i class="sonic-running">??????</i></td>
-                    <td class=" game_1"><i class="">?</i></td>
-                    <td class=" game_2"><i class="">?</i></td>
-                    <td class=" game_3"><i class="">?</i></td>
-                    <td class=" game_4"><i class="">?</i></td>
-                    <td class=" game_5"><i class="">?</i></td>
-                    <td class=" total"><i class="coin-wrap">?</i></td>
+                    <td class=" name"><i class="sonic-running">LUIS S</i></td>
+                    <td class=" game_1"><i class="">4</i></td>
+                    <td class=" game_2"><i class="">4</i></td>
+                    <td class=" game_3"><i class="">3</i></td>
+                    <td class=" game_4"><i class="">3</i></td>
+                    <td class=" game_5"><i class="">4</i></td>
+                    <td class=" total"><i class="coin-wrap">18</i></td>
                 </tr>
                 <tr class="place-7">
                     <th class=" place" scope="row">7</th>
-                    <td class=" name"><i class="sonic-running">??????</i></td>
-                    <td class=" game_1"><i class="">?</i></td>
-                    <td class=" game_2"><i class="">?</i></td>
-                    <td class=" game_3"><i class="">?</i></td>
-                    <td class=" game_4"><i class="">?</i></td>
-                    <td class=" game_5"><i class="">?</i></td>
-                    <td class=" total"><i class="coin-wrap">?</i></td>
+                    <td class=" name"><i class="sonic-running">SCOTT B</i></td>
+                    <td class=" game_1"><i class="">0</i></td>
+                    <td class=" game_2"><i class="">0</i></td>
+                    <td class=" game_3"><i class="">0</i></td>
+                    <td class=" game_4"><i class="">0</i></td>
+                    <td class=" game_5"><i class="">0</i></td>
+                    <td class=" total"><i class="coin-wrap">0</i></td>
                 </tr>
                 <tr class="place-8">
                     <th class=" place" scope="row">8</th>
-                    <td class=" name"><i class="sonic-running">??????</i></td>
-                    <td class=" game_1"><i class="">?</i></td>
-                    <td class=" game_2"><i class="">?</i></td>
-                    <td class=" game_3"><i class="">?</i></td>
-                    <td class=" game_4"><i class="">?</i></td>
-                    <td class=" game_5"><i class="">?</i></td>
-                    <td class=" total"><i class="coin-wrap">?</i></td>
+                    <td class=" name"><i class="sonic-running">ANTHONYG</i></td>
+                    <td class=" game_1"><i class="">0</i></td>
+                    <td class=" game_2"><i class="">0</i></td>
+                    <td class=" game_3"><i class="">0</i></td>
+                    <td class=" game_4"><i class="">0</i></td>
+                    <td class=" game_5"><i class="">0</i></td>
+                    <td class=" total"><i class="coin-wrap">0</i></td>
                 </tr>
                 </tbody>
             </table>

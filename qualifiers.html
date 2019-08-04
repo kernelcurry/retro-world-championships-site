@@ -30,11 +30,15 @@
             var query = new google.visualization.Query(
                 'https://docs.google.com/spreadsheets/d/1cwmj1QJDJdo2bDv873ERmQL24P6VYmzX1TtsOSH_H84' +
                 magicIncantation + queryString);
-            query.send(handleSampleDataQueryResponse);
+            query.send(handlemk64DataQueryResponse);
 
+            var query2 = new google.visualization.Query(
+                'https://docs.google.com/spreadsheets/d/13pIJVNug4xYQSRCeHoDW5S0tSbdDbu1yXQ19y5yx00s' +
+                magicIncantation + queryString);
+            query2.send(handlepf94DataQueryResponse);
         }
 
-        function handleSampleDataQueryResponse(response) {
+        function handlemk64DataQueryResponse(response) {
             if (response.isError()) {
                 alert('ERROR: unable to load scores, Please refresh');
                 return;
@@ -69,7 +73,7 @@
             });
 
             mk64.forEach(function (item, index) {
-                if (document.querySelector(".place-" + eval(index + 1)) === null) {
+                if (document.querySelector(".mk64place-" + eval(index + 1)) === null) {
                     return;
                 }
 
@@ -79,9 +83,29 @@
                 var fscore = "";
                 fscore = fscore.concat(m,"'",s.toString().replace('.', '"'));
 
-                document.querySelector(".place-" + eval(index + 1) + " .name i").innerHTML = item.name;
-                document.querySelector(".place-" + eval(index + 1) + " .score i").innerHTML = fscore;
+                document.querySelector(".mk64place-" + eval(index + 1) + " .name i").innerHTML = item.name;
+                document.querySelector(".mk64place-" + eval(index + 1) + " .score i").innerHTML = fscore;
             });
+        }
+
+        function handlepf94DataQueryResponse(response) {
+            if (response.isError()) {
+                alert('ERROR: unable to load scores, Please refresh');
+                return;
+            }
+
+            var data = response.getDataTable();
+            for (index = 0; index < data.getNumberOfRows(); index++) {
+                var name = data.getValue(index, 0);
+                var score = data.getValue(index, 1);
+
+                if (document.querySelector(".pf94place-" + eval(index + 1)) === null) {
+                    return;
+                }
+
+                document.querySelector(".pf94place-" + eval(index + 1) + " .name i").innerHTML = name;
+                document.querySelector(".pf94place-" + eval(index + 1) + " .score i").innerHTML = score;
+            }
         }
     </script>
 </head>
@@ -110,42 +134,42 @@
         <div class="col text-left">
             <table class="table top-8">
                 <tbody>
-                <tr class="place-1">
+                <tr class="mk64place-1">
                     <th scope="row">1</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-2">
+                <tr class="mk64place-2">
                     <th scope="row">2</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-3">
+                <tr class="mk64place-3">
                     <th scope="row">3</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-4">
+                <tr class="mk64place-4">
                     <th scope="row">4</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-5">
+                <tr class="mk64place-5">
                     <th scope="row">5</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-6">
+                <tr class="mk64place-6">
                     <th scope="row">6</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-7">
+                <tr class="mk64place-7">
                     <th scope="row">7</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-8">
+                <tr class="mk64place-8">
                     <th scope="row">8</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
@@ -156,42 +180,42 @@
         <div class="col text-text-left">
             <table class="table top-8">
                 <tbody>
-                    <tr class="place-1">
+                    <tr class="pf94place-1">
                         <th scope="row">1</th>
                         <td class="name"><i class="sonic-running">---</i></td>
                         <td class="score"><i class="coin-wrap">-</i></td>
                     </tr>
-                    <tr class="place-2">
+                    <tr class="pf94place-2">
                         <th scope="row">2</th>
                         <td class="name"><i class="sonic-running">---</i></td>
                         <td class="score"><i class="coin-wrap">-</i></td>
                     </tr>
-                    <tr class="place-3">
+                    <tr class="pf94place-3">
                         <th scope="row">3</th>
                         <td class="name"><i class="sonic-running">---</i></td>
                         <td class="score"><i class="coin-wrap">-</i></td>
                     </tr>
-                    <tr class="place-4">
+                    <tr class="pf94place-4">
                         <th scope="row">4</th>
                         <td class="name"><i class="sonic-running">---</i></td>
                         <td class="score"><i class="coin-wrap">-</i></td>
                     </tr>
-                    <tr class="place-5">
+                    <tr class="pf94place-5">
                         <th scope="row">5</th>
                         <td class="name"><i class="sonic-running">---</i></td>
                         <td class="score"><i class="coin-wrap">-</i></td>
                     </tr>
-                    <tr class="place-6">
+                    <tr class="pf94place-6">
                         <th scope="row">6</th>
                         <td class="name"><i class="sonic-running">---</i></td>
                         <td class="score"><i class="coin-wrap">-</i></td>
                     </tr>
-                    <tr class="place-7">
+                    <tr class="pf94place-7">
                         <th scope="row">7</th>
                         <td class="name"><i class="sonic-running">---</i></td>
                         <td class="score"><i class="coin-wrap">-</i></td>
                     </tr>
-                    <tr class="place-8">
+                    <tr class="pf94place-8">
                         <th scope="row">8</th>
                         <td class="name"><i class="sonic-running">---</i></td>
                         <td class="score"><i class="coin-wrap">-</i></td>
@@ -206,22 +230,22 @@
         <div class="col text-left">
             <table class="table table-sm bottom-scores">
                 <tbody>
-                <tr class="place-9">
+                <tr class="mk64place-9">
                     <th scope="row">9</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-10">
+                <tr class="mk64place-10">
                     <th scope="row">10</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-11">
+                <tr class="mk64place-11">
                     <th scope="row">11</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-12">
+                <tr class="mk64place-12">
                     <th scope="row">12</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
@@ -232,22 +256,22 @@
         <div class="col text-left">
             <table class="table table-sm bottom-scores">
                 <tbody>
-                <tr class="place-9">
+                <tr class="pf94place-9">
                     <th scope="row">9</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-10">
+                <tr class="pf94place-10">
                     <th scope="row">10</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-11">
+                <tr class="pf94place-11">
                     <th scope="row">11</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>
                 </tr>
-                <tr class="place-12">
+                <tr class="pf94place-12">
                     <th scope="row">12</th>
                     <td class="name"><i class="sonic-running">---</i></td>
                     <td class="score"><i class="coin-wrap">-</i></td>

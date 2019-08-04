@@ -14,7 +14,7 @@
           integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
           crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/bg-qualifiers.css">
+    <link rel="stylesheet" href="css/qualifiers.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -104,8 +104,12 @@
                 }
 
                 document.querySelector(".pf94place-" + eval(index + 1) + " .name i").innerHTML = name;
-                document.querySelector(".pf94place-" + eval(index + 1) + " .score i").innerHTML = score;
+                document.querySelector(".pf94place-" + eval(index + 1) + " .score i").innerHTML = formatNumber(score);
             }
+        }
+
+        function formatNumber(num) {
+            return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
         }
     </script>
 </head>

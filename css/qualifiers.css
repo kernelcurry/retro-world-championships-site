@@ -122,6 +122,10 @@ body {
     padding: 0;
 }
 
+.score {
+    text-align: right;
+}
+
 .bottom-scores {
     font-size: 2em;
     font-weight: lighter;

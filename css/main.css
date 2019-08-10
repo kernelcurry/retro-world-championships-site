@@ -11,6 +11,11 @@ body {
     height: auto;
 }
 
+.logo-md {
+    max-width: 400px;
+    height: auto;
+}
+
 .logo-sm {
     max-width: 300px;
     height: auto;

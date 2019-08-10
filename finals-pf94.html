@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Official site of the Retro World Championships">
+    <title>Retro World Championships</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+          integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/final-pf94.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(drawSheetName);
+
+        function drawSheetName() {
+            var queryString = encodeURIComponent("select upper(A), max(B) group by upper(A) order by max(B) desc label upper(A) 'name', max(B) 'score'");
+            var magicIncantation8 = '/gviz/tq?gid=0&headers=1&tq=';
+            var magicIncantation4 = '/gviz/tq?gid=545522617&headers=1&tq=';
+            var magicIncantation2 = '/gviz/tq?gid=748704313&headers=1&tq=';
+            var magicIncantation1 = '/gviz/tq?gid=1041853317&headers=1&tq=';
+
+            var query8 = new google.visualization.Query(
+                'https://docs.google.com/spreadsheets/d/1BCYHx9eqEHVn92FEOZG1d-6ahAO-Tx8RdLB7YW-W6ks'
+                + magicIncantation8
+                + queryString
+            );
+            query8.send(function(response) {self.handleQuery(response, 8)});
+
+            var query4 = new google.visualization.Query(
+                'https://docs.google.com/spreadsheets/d/1BCYHx9eqEHVn92FEOZG1d-6ahAO-Tx8RdLB7YW-W6ks'
+                + magicIncantation4
+                + queryString
+            );
+            query4.send(function(response) {self.handleQuery(response, 4)});
+
+            var query2 = new google.visualization.Query(
+                'https://docs.google.com/spreadsheets/d/1BCYHx9eqEHVn92FEOZG1d-6ahAO-Tx8RdLB7YW-W6ks'
+                + magicIncantation2
+                + queryString
+            );
+            query2.send(function(response) {self.handleQuery(response, 2)});
+
+            var query1 = new google.visualization.Query(
+                'https://docs.google.com/spreadsheets/d/1BCYHx9eqEHVn92FEOZG1d-6ahAO-Tx8RdLB7YW-W6ks'
+                + magicIncantation1
+                + queryString
+            );
+            query1.send(function(response) {self.handleQuery(response, 1)});
+        }
+
+        function handleQuery(response, n) {
+            if (response.isError()) {
+                alert('ERROR: unable to load scores, Please refresh');
+                return;
+            }
+
+            var data = response.getDataTable();
+            for (index = 0; index < data.getNumberOfRows(); index++) {
+                var name = data.getValue(index, 0);
+                var score = data.getValue(index, 1);
+
+                if (document.querySelector(".top-" + n + " .pf94place-" + eval(index + 1)) === null) {
+                    return;
+                }
+
+                document.querySelector(".top-" + n + " .pf94place-" + eval(index + 1) + " .name i").innerHTML = name;
+                document.querySelector(".top-" + n + " .pf94place-" + eval(index + 1) + " .score i").innerHTML = formatNumber(score);
+            }
+        }
+
+        function formatNumber(num) {
+            return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+        }
+    </script>
+</head>
+<body id="qualifiers-page">
+<div class="container-fluid">
+
+
+    <div class="row mt-1">
+        <div class="col text-center">
+            <img class="logo-md img-fluid mx-auto d-block" src="img/logo-powerfest-94.png">
+        </div>
+    </div>
+
+
+    <div class="row mt-4">
+
+            <div class="col text-text-left">
+                <table class="table top-8">
+                    <tbody>
+                        <tr class="pf94place-1">
+                            <th scope="row">1</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                        <tr class="pf94place-2">
+                            <th scope="row">2</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                        <tr class="pf94place-3">
+                            <th scope="row">3</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                        <tr class="pf94place-4">
+                            <th scope="row">4</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                        <tr class="pf94place-5">
+                            <th scope="row">5</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                        <tr class="pf94place-6">
+                            <th scope="row">6</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                        <tr class="pf94place-7">
+                            <th scope="row">7</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                        <tr class="pf94place-8">
+                            <th scope="row">8</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col text-text-left">
+                <table class="table top-4">
+                    <tbody>
+                        <tr class="pf94place-1">
+                            <th scope="row">1</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                        <tr class="pf94place-2">
+                            <th scope="row">2</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                        <tr class="pf94place-3">
+                            <th scope="row">3</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                        <tr class="pf94place-4">
+                            <th scope="row">4</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col text-text-left">
+                <table class="table top-2">
+                    <tbody>
+                        <tr class="pf94place-1">
+                            <th scope="row">1</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                        <tr class="pf94place-2">
+                            <th scope="row">2</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col text-text-left">
+                <table class="table top-1">
+                    <tbody>
+                        <tr class="pf94place-1">
+                            <th scope="row">1</th>
+                            <td class="name"><i class="sonic-running">---</i></td>
+                            <td class="score"><i class="coin-wrap">-</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</div>
+</body>
+</html>
+

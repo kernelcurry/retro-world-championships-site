@@ -78,7 +78,7 @@
                 }
 
                 var m = Math.floor(item.score / 60);
-                var s = ((item.score * 100) - (m * 60 * 100)) / 100;
+                var s = (((item.score * 100) - (m * 60 * 100)) / 100).toFixed(2);
 
                 var fscore = "";
                 fscore = fscore.concat(m,"'",s.toString().replace('.', '"'));

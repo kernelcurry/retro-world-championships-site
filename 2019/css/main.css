@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Joti+One');
+
+body {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+/*ID*/
+#logo {
+    width: 600px;
+    height: auto;
+}
+
+.logo-md {
+    max-width: 400px;
+    height: auto;
+}
+
+.logo-sm {
+    max-width: 300px;
+    height: auto;
+}
+
+.logo-xs {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Game */
+.game {
+    background:rgba(128, 128, 128, 0.0);
+    box-shadow: none;
+    border: none;
+}
+
+.game img {
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 2px;
+    height: 200px;
+    width: 200px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.game img.large {
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 2px;
+    height: 400px;
+    width: 400px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.gold {
+    color: rgba(242,215,50,1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+.silver {
+    color: #F0F0F0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+.bronze {
+    color: rgba(223,182,103,1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}

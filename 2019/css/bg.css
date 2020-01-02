@@ -1,0 +1,29 @@
+body {
+ background-color: rgba(0, 0, 0, 0.75);
+}
+
+#bg {
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#bg:before {
+    content: "";
+    position: absolute;
+    width: 1000%;
+    height: 400%;
+    top: -200%;
+    left: -400%;
+    z-index: -1;
+    background: 
+        url("../img/bg1.png") 0 0 repeat,
+        url("../img/bg2.png") 0 0 repeat;
+    -webkit-transform: rotate(-26deg);
+    -moz-transform: rotate(-26deg);
+    -ms-transform: rotate-(26deg);
+    -o-transform: rotate(-26deg);
+    transform: rotate(-26deg);
+    opacity:0.25;
+    overflow: hidden;
+}

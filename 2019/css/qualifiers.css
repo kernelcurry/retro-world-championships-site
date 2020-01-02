@@ -37,9 +37,9 @@ body {
 .coin-wrap::before {
     display: inline-block;
     content: "";
-    width: 1em;
+    width: 0;
     height: 1em;
-    background: transparent url('../img/coin.gif') no-repeat;
+    background: transparent;
     background-size:contain;
     position: relative;
     top: 5px;
@@ -49,9 +49,9 @@ body {
 .coin-wrap::after {
     display: inline-block;
     content: "";
-    width: 1em;
+    width: 0;
     height: 1em;
-    background: transparent url('../img/coin.gif') no-repeat;
+    background: transparent;
     background-size:contain;
     position: relative;
     top: 5px;
@@ -67,7 +67,7 @@ body {
     content: "";
     width: 1em;
     height: 1em;
-    background: transparent url('../img/sonic-running.gif') no-repeat;
+    background: transparent;
     background-size:contain;
     position: relative;
     top: 4px;

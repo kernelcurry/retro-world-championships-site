@@ -16,8 +16,63 @@
 
     <link rel="stylesheet" href="css/bg.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            const getItemOffset = item => {
+                console.log(item.offsetTop);
+                return item.offsetTop;
+            };
+
+            const moveMarker = offset => {
+                const marker = document.querySelector('.active-marker');
+                marker.style.transform = `translateY(${offset}px)`;
+
+            };
+
+            const toggleActive = e => {
+                e.preventDefault();
+
+                // Remove any existing active classes
+                const links = document.querySelectorAll('.vertical-menu-item');
+                links.forEach(link => link.classList.remove('is-active'));
+
+                // Add class to active link
+                const activeItem = e.target.parentElement;
+                activeItem.classList.toggle('is-active');
+                const offset = getItemOffset(activeItem);
+                moveMarker(offset);
+
+                setTimeout(function() {
+                    window.open(e.target.getAttribute("href"), '_top');
+                }, 500);
+            };
+
+            // Attach click event listener
+            const menu = document.querySelector('.vertical-menu');
+
+            menu.addEventListener('click', toggleActive);
+        })
+    </script>
 </head>
 <body>
+
+<div class='vertical-menu-wrapper'>
+    <ul class="vertical-menu ul--reset">
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="1" href="../index.html">2020</a>
+        </li>
+        <li class="vertical-menu-item is-active">
+            <a class="link--inverse-menu" data-vertical="2" href="index.html">2019</a>
+        </li>
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="3" href="../2018/index.html">2018</a>
+        </li>
+    </ul>
+    <i class='active-marker'></i>
+</div>
+
 <div id="bg">
 <div class="container">
     <div class="row">

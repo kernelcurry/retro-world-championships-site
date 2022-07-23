@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Joti+One');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
     color: white;
@@ -72,14 +72,10 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
 
-
-.sonic-name {
-    font-family: 'Joti One', monospace;
-}
-
 #qualifiers-page {
     font-size: 1em;
     background-color: blue;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .top-8 {
@@ -98,7 +94,7 @@ body {
 }
 
 .finals {
-    font-family: 'Joti One', monospace;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .finals td{

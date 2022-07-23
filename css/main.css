@@ -71,3 +71,47 @@ body {
     color: rgba(223,182,103,1);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
+
+
+.sonic-name {
+    font-family: 'Joti One', monospace;
+}
+
+#qualifiers-page {
+    font-size: 1em;
+    background-color: blue;
+}
+
+.top-8 {
+    font-size: 4em;
+    font-weight: bolder;
+}
+
+.bottom-scores {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.finals {
+    font-family: 'Joti One', monospace;
+}
+
+.finals td{
+    font-size: 1.8em;
+    font-weight: lighter;
+}
+
+.finals th{
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+.finals th.place{
+    font-size: 1.8em;
+    font-weight: bolder;
+}

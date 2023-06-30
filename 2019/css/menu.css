@@ -35,7 +35,9 @@
     transition: all 0.4s;
     height: 41px;
     text-align: right;
+    margin-right: 7px;
 }
+
 .vertical-menu-item.is-active {
     font-size: 1.4em;
 }

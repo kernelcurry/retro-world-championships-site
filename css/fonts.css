@@ -1,0 +1,19 @@
+.sf_score_digit {
+    width: 32px; /* Set the width and height of your icon */
+    height: 64px;
+    display: inline-block;
+    margin-left: 4px;
+    margin-right:4px;
+    background-image: url('./../img/sf_font_score.png');
+    background-size: cover; /* This will make the image cover the entire element */
+}
+
+.sf_score_digit_0 {
+    /* Set the background position to show the specific sprite */
+    background-position: 0 0; /* Adjust these values to show the correct sprite */
+}
+
+.sf_score_digit_1 {
+    /* Set the background position to show the specific sprite */
+    background-position: -32px 0; /* Adjust these values to show the correct sprite */
+}

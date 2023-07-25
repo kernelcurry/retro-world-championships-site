@@ -126,6 +126,7 @@ body {
 
 .score span.score-container {
     position: relative;
+    display: inline-block;
 }
 
 .score span.score-container::before,
@@ -137,7 +138,7 @@ body {
     background-image: url('./../img/sf_ship.png'); /* Replace 'image.png' with the actual path to your image */
     background-size: cover;
     position: absolute;
-    top: -8px;
+    top: 6px;
 }
 
 .score span.score-container::before {
@@ -153,7 +154,7 @@ body {
     width: 26px;
     height: 32px;
     position: absolute;
-    top: -6px;
+    top: 2px;
 }
 
 .bottom-scores .score span.score-container::before {
@@ -164,6 +165,3 @@ body {
     right: -32px; /* Adjust the value to position the image after the .score element */
 }
 
-.bottom-scores .score span.score-container span {
-    margin: 2px 10px;
-}

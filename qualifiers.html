@@ -28,8 +28,8 @@
                 const data = await res.json();
                 handleSampleDataQueryResponse(data);
             }catch(err) {
-                console.error(err)
-                //alert('ERROR: unable to load scores, Please refresh');
+                console.error(err);
+                alert('ERROR: unable to load scores, Please refresh');
             }
         };
 
@@ -61,7 +61,30 @@
                 }
 
                 document.querySelector(".place-" + eval(index + 1) + " .name").innerHTML = player.name;
-                document.querySelector(".place-" + eval(index + 1) + " .score").innerHTML = player.score;
+                // document.querySelector(".place-" + eval(index + 1) + " .score").innerHTML = player.score;
+
+                // Init Score Vars
+                let score = parseInt(player.score);
+                let score_string = score.toString();
+                score_string = score_string.substring(0,score_string.length-1);
+
+                if (score_string.length > 6 || score < 0) {
+                    score_string = '';
+                }
+
+                let score_digit_array = Array.from(score_string, Number);
+                let score_digit_length = score_digit_array.length;
+
+                Array.from(document.querySelectorAll(".place-" + eval(index + 1) + " .score .score-container .sf_score_digit")).forEach(
+                    (element, i, array) => {
+                        let score_digit = 0;
+                        if (score_digit_length >= (6 - i) ) {
+                            score_digit = score_digit_array.shift();
+                        }
+
+                        element.className = "sf_score_digit sf_score_digit_" + score_digit;
+                    }
+                );
             });
         }
     </script>
@@ -97,7 +120,7 @@
                     <td class="name">---</td>
                     <td class="score text-center">
                         <span class="score-container">
-                            <span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_1"></span><span class="sf_score_digit sf_score_digit_2"></span><span class="sf_score_digit sf_score_digit_3"></span><span class="sf_score_digit sf_score_digit_4"></span><span class="sf_score_digit sf_score_digit_5"></span>
+                            <span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span>
                         </span>
                     </td>
                 </tr>
@@ -106,7 +129,7 @@
                     <td class="name">---</i></td>
                     <td class="score text-center">
                         <span class="score-container">
-                            <span class="sf_score_digit sf_score_digit_6"></span><span class="sf_score_digit sf_score_digit_7"></span><span class="sf_score_digit sf_score_digit_8"></span><span class="sf_score_digit sf_score_digit_9"></span><span class="sf_score_digit sf_score_digit_4"></span><span class="sf_score_digit sf_score_digit_5"></span>
+                            <span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span>
                         </span>
                     </td>                </tr>
                 <tr class="place-3">
@@ -116,7 +139,8 @@
                         <span class="score-container">
                             <span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span>
                         </span>
-                    </td>                 </tr>
+                    </td>
+                </tr>
                 <tr class="place-4">
                     <th scope="row">4</th>
                     <td class="name">---</i></td>
@@ -124,7 +148,8 @@
                         <span class="score-container">
                             <span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span>
                         </span>
-                    </td>                 </tr>
+                    </td>
+                </tr>
                 </tbody>
             </table>
         </div>
@@ -138,7 +163,8 @@
                         <span class="score-container">
                             <span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span>
                         </span>
-                    </td>                 </tr>
+                    </td>
+                </tr>
                 <tr class="place-6">
                     <th scope="row">6</th>
                     <td class="name">---</i></td>
@@ -146,7 +172,8 @@
                         <span class="score-container">
                             <span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span>
                         </span>
-                    </td>                 </tr>
+                    </td>
+                </tr>
                 <tr class="place-7">
                     <th scope="row">7</th>
                     <td class="name">---</i></td>
@@ -154,7 +181,8 @@
                         <span class="score-container">
                             <span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span>
                         </span>
-                    </td>                 </tr>
+                    </td>
+                </tr>
                 <tr class="place-8">
                     <th scope="row">8</th>
                     <td class="name">---</i></td>
@@ -162,7 +190,8 @@
                         <span class="score-container">
                             <span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span><span class="sf_score_digit sf_score_digit_0"></span>
                         </span>
-                    </td>                 </tr>
+                    </td>
+                </tr>
                 </tbody>
             </table>
         </div>

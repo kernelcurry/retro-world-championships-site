@@ -22,7 +22,7 @@
 
         const LoadData = async () => {
             try {
-                const url = 'https://sheets.googleapis.com/v4/spreadsheets/1BogvWBbcVCYVCpLMFrS20siuA0q1tpIAO3bQgMcuZm0/values/A2:B?key=AIzaSyDmEYIUe3T3fzHcWLja5KZ0x1wb3BWHPrA'
+                const url = 'https://sheets.googleapis.com/v4/spreadsheets/1f30mwaxRed9nfp3lp8hKs0FMAnG9SGCkPYTPcYfQ9Mc/values/A2:B?key=AIzaSyDmEYIUe3T3fzHcWLja5KZ0x1wb3BWHPrA'
 
                 const res = await fetch(url);
                 const data = await res.json();
@@ -66,8 +66,6 @@
                 // Init Score Vars
                 let score = parseInt(player.score);
                 let score_string = score.toString();
-                // TODO: Remove Below when pointing to correct sheet
-                score_string = score_string.substring(0,score_string.length-1);
 
                 if (score_string.length > 6 || score < 0) {
                     score_string = '';

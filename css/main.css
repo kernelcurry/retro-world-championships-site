@@ -106,26 +106,83 @@ body {
     font-weight: bolder;
 }
 
-.finals {
+/*Page: Finals*/
+#finals-page {
+    font-size: 0.8em;
     font-family: 'Press Start 2P', cursive;
     font-variant-ligatures: none;
+    color: white;
+    margin-top: 16px
 }
 
-.finals td{
-    font-size: 1.8em;
-    font-weight: lighter;
+#finals-page .final-table .header td,
+#finals-page .final-table .header th{
+    border-top: none;
 }
 
-.finals th{
+#finals-page .final-table tr:not(:first-child) {
+    border-top: 2px solid #dee2e6;
+}
+
+#finals-page .final-table {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#finals-page .game-title {
+    font-size: 0.4em;
+    font-weight: bolder;
+    text-align: center;
+    position: relative;
+    width: 160px; /* Width of Score Columns */
+}
+
+#finals-page .game-title .year {
+    font-size: 2em;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#finals-page .final-name {
+    font-size: 1.0em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+#finals-page .final-score-container {
+    position: relative;
+    text-align: center;
+}
+
+#finals-page .final-pts {
+    font-size: 1.2em;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    transform: translate(-50%, -50%);
+}
+
+#finals-page .final-score {
+    font-size: 0.4em;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+}
+
+#finals-page .total {
     font-size: 1.2em;
     font-weight: bolder;
 }
 
-.finals th.place{
-    font-size: 1.8em;
-    font-weight: bolder;
-}
-
+/*Star Fox Ship Wrapper*/
 .score span.score-container {
     position: relative;
     display: inline-block;
@@ -166,4 +223,3 @@ body {
 .bottom-scores .score span.score-container::after {
     right: -32px; /* Adjust the value to position the image after the .score element */
 }
-

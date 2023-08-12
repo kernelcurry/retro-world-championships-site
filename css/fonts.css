@@ -9,8 +9,13 @@
 }
 
 .bottom-scores .sf_score_digit {
-    width: 16px; /* Set the width and height of your icon */
-    height: 32px;
+    /*width: 16px; !* Set the width and height of your icon *!*/
+    /*height: 32px;*/
+    scale: 50%;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: -5px;
+    margin-top: -12px;
 }
 
 .sf_score_digit_0 {

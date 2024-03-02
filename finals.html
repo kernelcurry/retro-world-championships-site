@@ -23,13 +23,17 @@
 
     const LoadData = async () => {
       try {
-        const url = 'https://sheets.googleapis.com/v4/spreadsheets/1JTnFduos021mT5JTWLsoIK1v4ZjTly3BR0-AsCWD6UE/values/A2:M?key=AIzaSyDmEYIUe3T3fzHcWLja5KZ0x1wb3BWHPrA'
+        let sheet = '1FDUoRHLZA7dcSjsPt7Oh7WISn0LGctAvKnfW1Eqv5J8';
+        let values = 'A2:B';
+        let key = 'AIzaSyCThUR5sdoLnv7Q-Dp9Z4-PTs6THswyV4s'; // Prod
+
+        const url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheet + '/values/' + values + '?key=' + key
 
         const res = await fetch(url);
         const data = await res.json();
         handleSampleDataQueryResponse(data);
       }catch(err) {
-        console.error(err)
+        console.error(err);
         alert('ERROR: unable to load scores, Please refresh');
       }
     };

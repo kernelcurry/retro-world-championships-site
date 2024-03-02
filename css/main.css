@@ -26,6 +26,12 @@ body {
     height: auto;
 }
 
+@media (max-width: 1920px) {
+    .logo-md, .logo-sm, .logo-xs, #logo {
+        max-width: 100%;
+    }
+}
+
 /* Game */
 .game {
     background:rgba(128, 128, 128, 0.0);
@@ -91,19 +97,64 @@ body {
     color: white;
 }
 
+.score span {
+    float: right;
+}
+
+@media (min-width: 1920px) {
+    .container-bottom-scores {
+        max-width: 1600px;
+    }
+}
+
 .top-8 {
     font-size: 2.8em;
     font-weight: bolder;
 }
 
 .bottom-scores {
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: lighter;
 }
 
 .title {
     font-size: 3em;
     font-weight: bolder;
+}
+
+.sub-title {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.banner {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 2em;
+    line-height: 3em;
+}
+
+@media (max-width: 1200px) {
+    .top-8 {
+        font-size: 1em;
+    }
+
+    .bottom-scores {
+        font-size: 0.6em;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .sub-title {
+        font-size: 1em;
+    }
+
+    .banner {
+        display: none;
+    }
 }
 
 /*Page: Finals*/
@@ -132,6 +183,7 @@ body {
 
 #finals-page .game-title {
     font-size: 0.4em;
+    font-weight: bolder;
     font-weight: bolder;
     text-align: center;
     position: relative;
@@ -188,17 +240,17 @@ body {
     display: inline-block;
 }
 
-.score span.score-container::before,
-.score span.score-container::after {
-    content: "";
-    display: block;
-    width: 46px;
-    height: 58px;
-    background-image: url('./../img/sf_ship.png'); /* Replace 'image.png' with the actual path to your image */
-    background-size: cover;
-    position: absolute;
-    top: 6px;
-}
+/*.score span.score-container::before,*/
+/*.score span.score-container::after {*/
+/*    content: "";*/
+/*    display: block;*/
+/*    width: 46px;*/
+/*    height: 58px;*/
+/*    background-image: url('./../img/sf_ship.png'); !* Replace 'image.png' with the actual path to your image *!*/
+/*    background-size: cover;*/
+/*    position: absolute;*/
+/*    top: 6px;*/
+/*}*/
 
 .score span.score-container::before {
     left: -58px; /* Adjust the value to position the image before the .score element */
@@ -222,4 +274,26 @@ body {
 
 .bottom-scores .score span.score-container::after {
     right: -32px; /* Adjust the value to position the image after the .score element */
+}
+
+/*!* The scanlines *!*/
+
+.scanlines {
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 100000;
+    width:100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(39, 43, 46, 0.6) 1px, transparent 1px);
+    background-repeat: repeat;
+    background-size: 2px 2px;
+    background-attachment: fixed;
+}
+
+@media (max-width: 1200px) {
+    .scanlines {
+        display: none;
+    }
 }

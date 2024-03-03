@@ -4,6 +4,7 @@ body {
     background-color: #1e50b9;
 }
 
-body.qualifier {
+body.qualifier,
+#finals-page {
     background-color: black;
 }

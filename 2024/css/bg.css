@@ -1,0 +1,10 @@
+body {
+    color: black;
+    /*background-image: url("../img/bg.gif");*/
+    background-color: #1e50b9;
+}
+
+body.qualifier,
+#finals-page {
+    background-color: black;
+}

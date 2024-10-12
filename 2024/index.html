@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Official site of the Retro Championships taking place March 15th to 17th at the Game On Expo in Phoenix, Arizona.">
+    <title>Retro Championships</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+          integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bg.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+<!--     <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            const getItemOffset = item => {
+                return item.offsetTop;
+            };
+
+            const moveMarker = offset => {
+                const marker = document.querySelector('.active-marker');
+                marker.style.transform = `translateY(${offset}px)`;
+
+            };
+
+            const toggleActive = e => {
+                e.preventDefault();
+
+                // Remove any existing active classes
+                const links = document.querySelectorAll('.vertical-menu-item');
+                links.forEach(link => link.classList.remove('is-active'));
+
+                // Add class to active link
+                const activeItem = e.target.parentElement;
+                activeItem.classList.toggle('is-active');
+                const offset = getItemOffset(activeItem);
+                moveMarker(offset);
+
+                setTimeout(function() {
+                    window.open(e.target.getAttribute("href"), '_top');
+                }, 500);
+            };
+
+            // Attach click event listener
+            const menu = document.querySelector('.vertical-menu');
+
+            menu.addEventListener('click', toggleActive);
+        })
+    </script> -->
+</head>
+<body>
+
+<div class='vertical-menu-wrapper'>
+    <ul class="vertical-menu ul--reset">
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="1" href="../index.html">2025</a>
+        </li>
+        <li class="vertical-menu-item is-active">
+            <a class="link--inverse-menu" data-vertical="2" href="index.html">2024</a>
+        </li>
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="3" href="../2023/index.html">2023</a>
+        </li>
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="4" href="../2022/index.html">2022</a>
+        </li>
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="5" href="../2019/index.html">2019</a>
+        </li>
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="6" href="../2018/index.html">2018</a>
+        </li>
+    </ul>
+    <!-- <i class='active-marker'></i> -->
+</div>
+
+<div id="bg">
+    <div id="hero">
+        <img id="logo" class="img-fluid mx-auto d-block" src="img/logo-2024-md.png">
+        <div class="col-sm text-center">
+            <p class="h1">March 15-17</p>
+            <a href="https://www.gameonexpo.com/?utm_source=retrochampionships.com"
+               target="_blank"
+               class="btn btn-danger btn-lg active"
+               role="button"
+               aria-pressed="true">Event Tickets & Information</a>
+            <a href="qualifiers.html"
+               target="_blank"
+               class="btn btn-danger btn-lg active"
+               role="button"
+               aria-pressed="true">Qualifier Leaderboard</a>
+        </div>
+    </div>
+
+<div class="container">
+
+    <div class="row mt-2">
+        <div class="col-sm text-center">
+            <div class="row">
+                <div class="col-sm text-center mb-5 gold">
+                    <h2><i class="fas fa-trophy"></i> 1st Place: GameOn Expo 2024 - Retro Championships Belt</h2>
+                    <img src="img/belt.jpg" style="max-width:80%"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm text-center silver">
+                    <h2><i class="fas fa-star"></i> Top Qualifier: Repro of the Gold 1990 Nintendo World Championships cart</h2>
+                    <img src="img/prize_qual.jpg" style="max-width:80%"/>
+                </div>
+            </div>
+            <p class="h3 mb-5 mt-5">
+                Here we are again with the 2024 Retro Championships.
+                We have a new shiny logo! We're excited to bring you this March edition of the Retro Championships this year.
+                The weather should be a little cooler than usual and with baseball pre-season starting what better time for us to have the 94 Powerfest cart as our qualifier!
+                Super Mario Bros. All Stars, Super Mario Kart and Ken Griffey Jr. Baseball highlight this years qualifier which will be held on March 15th and 16th along with some early birds on the 17th for any people looking to better their score before our finals start.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg text-center">
+            <div class="card game text-center">
+                <img class="card-img-top mx-auto d-block large-clean bg-black" src="img/logo-powerfest-94.png" alt="94 Powerfest">
+                <div class="card-body">
+                    <h5 class="card-title h1">Qualifier: 94 Powerfest</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-sm text-center">
+            <p class="h3 mb-5 mt-5">
+                The top 8 qualifying scores will compete on Sunday afternoon in our gauntlet final consisting of:
+                1990 Nintendo World Championships, 1991 Campus Challenge, 1992 Campus Challenge, 1993 StarFox Super Weekend and 1995 Donkey Kong Country Competition.
+                Lowest qualifier will play first while the top qualifier will play last. Points will be awarded based on your placement among the 8 finalists in each game. 8 points for 1st down to 1 point for 8th. Winner will be crowned the 2024 Game On Expo Retro Champion and take home the Championship belt!
+            </p>
+            <p class="h3 mb-5 mt-5">We're looking forward to seeing new and familiar faces this year. We will see you all there!</p>
+        </div>
+    </div>
+
+<!-- 
+    <div class="row mt-5">
+        <div class="col-sm">
+            <div class="card game text-center">
+                <img class="card-img-top mx-auto d-block" src="img/1992ChallengeSuperMarioWorldTitle.png"
+                     alt="Daytona USA (Sega Saturn)">
+                <div class="card-body">
+                    <h5 class="card-title">Game 1 - Super Mario World</h5>
+                    <p class="card-text">Yoshi's Island 1/2 - Collect 50 coins</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card game text-center">
+                <img class="card-img-top  mx-auto d-block" src="img/1992ChallengeFZeroTitle.png" alt="Viewpoint (Neo Geo)">
+                <div class="card-body">
+                    <h5 class="card-title">Game 2 - F-Zero</h5>
+                    <p class="card-text">Mute City I - 2 Laps</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card game text-center">
+                <img class="card-img-top  mx-auto d-block" src="img/1992ChallengePilotwingsTitle.png" alt="Tony Hawk's Pro Skater (Playstation)">
+                <div class="card-body">
+                    <h5 class="card-title">Game 3 - Pilot Wings</h5>
+                    <p class="card-text">Successful Landings - Highest Score</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+</div>
+</body>
+</html>
+

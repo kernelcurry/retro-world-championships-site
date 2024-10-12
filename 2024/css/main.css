@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+/*ID*/
+#hero {
+    width: 100%;
+    height: auto;
+    background-image: url('../img/hero_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#hero .h1 {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 1);
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+#logo {
+    width: 600px;
+    height: auto;
+}
+
+.logo-md {
+    max-width: 400px;
+    height: auto;
+}
+
+.logo-sm {
+    max-width: 300px;
+    height: auto;
+}
+
+.logo-xs {
+    max-width: 200px;
+    height: auto;
+}
+
+@media (max-width: 1920px) {
+    .logo-md, .logo-sm, .logo-xs, #logo {
+        max-width: 100%;
+    }
+}
+
+/* Game */
+.game {
+    background:rgba(128, 128, 128, 0.0);
+    box-shadow: none;
+    border: none;
+}
+
+.game img {
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 2px;
+    height: 200px;
+    width: 200px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.game img.large {
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 2px;
+    height: 400px;
+    width: 400px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.game img.large-clean {
+    border-radius: 0%;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 2px;
+    height: 400px;
+    width: 400px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.gold {
+    color: rgba(242,215,50,1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+.silver {
+    color: #F0F0F0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+.bronze {
+    color: rgba(223,182,103,1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+#qualifiers-page {
+    font-size: 1em;
+    font-family: 'Press Start 2P', cursive;
+    font-variant-ligatures: none;
+    color: white;
+}
+
+.score span {
+    float: right;
+}
+
+@media (min-width: 1920px) {
+    .container-bottom-scores {
+        max-width: 1600px;
+    }
+}
+
+.top-8 {
+    font-size: 2.8em;
+    font-weight: bolder;
+}
+
+.bottom-scores {
+    font-size: 1.8em;
+    font-weight: lighter;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.sub-title {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.banner {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 2em;
+    line-height: 3em;
+}
+
+@media (max-width: 1200px) {
+    .top-8 {
+        font-size: 1em;
+    }
+
+    .bottom-scores {
+        font-size: 0.6em;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .sub-title {
+        font-size: 1em;
+    }
+
+    .banner {
+        display: none;
+    }
+}
+
+/*Page: Finals*/
+#finals-page {
+    font-size: 0.8em;
+    font-family: 'Press Start 2P', cursive;
+    font-variant-ligatures: none;
+    color: white;
+    margin-top: 16px
+}
+
+#finals-page .final-table .header td,
+#finals-page .final-table .header th{
+    border-top: none;
+}
+
+#finals-page .final-table tr:not(:first-child) {
+    border-top: 2px solid #dee2e6;
+}
+
+#finals-page .final-table {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#finals-page .game-title {
+    font-size: 0.4em;
+    font-weight: bolder;
+    font-weight: bolder;
+    text-align: center;
+    position: relative;
+    width: 160px; /* Width of Score Columns */
+}
+
+#finals-page .game-title .year {
+    font-size: 2em;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#finals-page .final-name {
+    font-size: 1.0em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+#finals-page .final-score-container {
+    position: relative;
+    text-align: center;
+}
+
+#finals-page .final-pts {
+    font-size: 1.2em;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    transform: translate(-50%, -50%);
+}
+
+#finals-page .final-score {
+    font-size: 0.4em;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+}
+
+#finals-page .total {
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+/*Star Fox Ship Wrapper*/
+.score span.score-container {
+    position: relative;
+    display: inline-block;
+}
+
+/*.score span.score-container::before,*/
+/*.score span.score-container::after {*/
+/*    content: "";*/
+/*    display: block;*/
+/*    width: 46px;*/
+/*    height: 58px;*/
+/*    background-image: url('./../img/sf_ship.png'); !* Replace 'image.png' with the actual path to your image *!*/
+/*    background-size: cover;*/
+/*    position: absolute;*/
+/*    top: 6px;*/
+/*}*/
+
+.score span.score-container::before {
+    left: -58px; /* Adjust the value to position the image before the .score element */
+}
+
+.score span.score-container::after {
+    right: -58px; /* Adjust the value to position the image after the .score element */
+}
+
+.bottom-scores .score span.score-container::before,
+.bottom-scores .score span.score-container::after {
+    width: 26px;
+    height: 32px;
+    position: absolute;
+    top: 2px;
+}
+
+.bottom-scores .score span.score-container::before {
+    left: -32px; /* Adjust the value to position the image before the .score element */
+}
+
+.bottom-scores .score span.score-container::after {
+    right: -32px; /* Adjust the value to position the image after the .score element */
+}
+
+/*!* The scanlines *!*/
+
+.scanlines {
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 100000;
+    width:100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(39, 43, 46, 0.6) 1px, transparent 1px);
+    background-repeat: repeat;
+    background-size: 2px 2px;
+    background-attachment: fixed;
+}
+
+@media (max-width: 1200px) {
+    .scanlines {
+        display: none;
+    }
+}

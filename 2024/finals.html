@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Official site of the Retro World Championships">
+  <title>Retro World Championships</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+        integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bg.css">
+  <link rel="stylesheet" href="css/fonts.css">
+
+
+  <script type="text/javascript">
+
+    const LoadData = async () => {
+      try {
+        let sheet = '1FDUoRHLZA7dcSjsPt7Oh7WISn0LGctAvKnfW1Eqv5J8';
+        let values = 'A2:M';
+        let key = 'AIzaSyCThUR5sdoLnv7Q-Dp9Z4-PTs6THswyV4s'; // Prod
+
+        const url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheet + '/values/' + values + '?key=' + key
+
+        const res = await fetch(url);
+        const data = await res.json();
+        handleSampleDataQueryResponse(data);
+      }catch(err) {
+        console.error(err);
+        alert('ERROR: unable to load scores, Please refresh');
+      }
+    };
+
+    LoadData();
+
+    function handleSampleDataQueryResponse(response) {
+      var data = response.values;
+      console.log(data);
+
+      var leaderboard = [];
+      var names = [];
+      var leaderboard_index = 0;
+      for (i = 0; i < data.length; i++) {
+        var rplace = data[i][0];
+        var rname = data[i][1];
+        var rscore1 = data[i][2];
+        var rpts1 = data[i][3];
+        var rscore2 = data[i][4];
+        var rpts2 = data[i][5];
+        var rscore3 = data[i][6];
+        var rpts3 = data[i][7];
+        var rscore4 = data[i][8];
+        var rpts4 = data[i][9];
+        var rscore5 = data[i][10];
+        var rpts5 = data[i][11];
+        var rtotal = data[i][12];
+
+        if (names.includes(rname) !== true) {
+          names.push(rname);
+          leaderboard[rplace - 1] = {
+            "place": rplace,
+            "name": rname,
+            "pts1": rpts1,
+            "score1": rscore1,
+            "pts2": rpts2,
+            "score2": rscore2,
+            "pts3": rpts3,
+            "score3": rscore3,
+            "pts4": rpts4,
+            "score4": rscore4,
+            "pts5": rpts5,
+            "score5": rscore5,
+            "total": rtotal
+          };
+
+          leaderboard_index++;
+        }
+      }
+
+      console.log(leaderboard);
+
+      leaderboard.forEach(function (player, index) {
+        if (document.querySelector(".place-" + eval(index + 1)) === null) {
+          return;
+        }
+
+        document.querySelector(".place-" + eval(index + 1) + " .name").innerHTML = player.name;
+        document.querySelector(".place-" + eval(index + 1) + " .pts1").innerHTML = player.pts1;
+        document.querySelector(".place-" + eval(index + 1) + " .score1").innerHTML = player.score1;
+        document.querySelector(".place-" + eval(index + 1) + " .pts2").innerHTML = player.pts2;
+        document.querySelector(".place-" + eval(index + 1) + " .score2").innerHTML = player.score2;
+        document.querySelector(".place-" + eval(index + 1) + " .pts3").innerHTML = player.pts3;
+        document.querySelector(".place-" + eval(index + 1) + " .score3").innerHTML = player.score3;
+        document.querySelector(".place-" + eval(index + 1) + " .pts4").innerHTML = player.pts4;
+        document.querySelector(".place-" + eval(index + 1) + " .score4").innerHTML = player.score4;
+        document.querySelector(".place-" + eval(index + 1) + " .pts5").innerHTML = player.pts5;
+        document.querySelector(".place-" + eval(index + 1) + " .score5").innerHTML = player.score5;
+        document.querySelector(".place-" + eval(index + 1) + " .total").innerHTML = player.total;
+      });
+    }
+  </script>
+<!--  <meta http-equiv="refresh" content="120">-->
+</head>
+<body id="finals-page">
+<!--<div class="scanlines"></div>-->
+<div class="container-fluid">
+  <div class="row mb-5">
+    <div class="col text-left">
+      <a href="index.html">
+        <img class="logo-sm img-fluid mx-auto d-block" src="img/logo-2024-md.png">
+      </a>
+    </div>
+    <div class="col col-md-9 text-center">
+      <h1 class="title">Retro Championships Finals</h1>
+      <p><i>RetroWorldChampionships.com</i></p>
+    </div>
+    <div class="col text-right d-none d-md-block">
+      <a href="index.html">
+        <img class="logo-sm img-fluid mx-auto d-block" src="img/logo-2024-md.png">
+      </a>
+    </div>
+  </div>
+  <div class="row mt-5 justify-content-md-center">
+    <div class="col text-left">
+      <table class="final-table table top-8">
+        <tbody>
+        <tr class="header">
+          <th></th>
+          <td class='game-title'>NWC <i class="year">1990</i></td>
+          <td class='game-title'>CC <i class="year">1991</i></td>
+          <td class='game-title'>CC <i class="year">1992</i></td>
+          <td class='game-title'>SFSW <i class="year">1993</i></td>
+          <td class='game-title'>DKCC <i class="year">1995</i></td>
+          <td class='game-title'></td>
+        </tr>
+        <tr class="place-1">
+          <th scope="row" class="final-name name">---------</th>
+          <td class='final-score-container'><i class="final-pts pts1">-</i><i class="final-score score1">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts2">-</i><i class="final-score score2">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts3">-</i><i class="final-score score3">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts4">-</i><i class="final-score score4">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts5">-</i><i class="final-score score5">--</i></td>
+          <td class="total">--</td>
+        </tr>
+        <tr class="place-2">
+          <th scope="row" class="final-name name">---------</th>
+          <td class='final-score-container'><i class="final-pts pts1">-</i><i class="final-score score1">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts2">-</i><i class="final-score score2">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts3">-</i><i class="final-score score3">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts4">-</i><i class="final-score score4">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts5">-</i><i class="final-score score5">--</i></td>
+          <td class="total">--</td>
+        </tr>
+        <tr class="place-3">
+          <th scope="row" class="final-name name">---------</th>
+          <td class='final-score-container'><i class="final-pts pts1">-</i><i class="final-score score1">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts2">-</i><i class="final-score score2">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts3">-</i><i class="final-score score3">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts4">-</i><i class="final-score score4">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts5">-</i><i class="final-score score5">--</i></td>
+          <td class="total">--</td>
+        </tr>
+        <tr class="place-4">
+          <th scope="row" class="final-name name">---------</th>
+          <td class='final-score-container'><i class="final-pts pts1">-</i><i class="final-score score1">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts2">-</i><i class="final-score score2">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts3">-</i><i class="final-score score3">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts4">-</i><i class="final-score score4">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts5">-</i><i class="final-score score5">--</i></td>
+          <td class="total">--</td>
+        </tr>
+        <tr class="place-5">
+          <th scope="row" class="final-name name">---------</th>
+          <td class='final-score-container'><i class="final-pts pts1">-</i><i class="final-score score1">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts2">-</i><i class="final-score score2">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts3">-</i><i class="final-score score3">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts4">-</i><i class="final-score score4">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts5">-</i><i class="final-score score5">--</i></td>
+          <td class="total">--</td>
+        </tr>
+        <tr class="place-6">
+          <th scope="row" class="final-name name">---------</th>
+          <td class='final-score-container'><i class="final-pts pts1">-</i><i class="final-score score1">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts2">-</i><i class="final-score score2">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts3">-</i><i class="final-score score3">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts4">-</i><i class="final-score score4">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts5">-</i><i class="final-score score5">--</i></td>
+          <td class="total">--</td>
+        </tr>
+        <tr class="place-7">
+          <th scope="row" class="final-name name">---------</th>
+          <td class='final-score-container'><i class="final-pts pts1">-</i><i class="final-score score1">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts2">-</i><i class="final-score score2">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts3">-</i><i class="final-score score3">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts4">-</i><i class="final-score score4">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts5">-</i><i class="final-score score5">--</i></td>
+          <td class="total">--</td>
+        </tr>
+        <tr class="place-8">
+          <th scope="row" class="final-name name">---------</th>
+          <td class='final-score-container'><i class="final-pts pts1">-</i><i class="final-score score1">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts2">-</i><i class="final-score score2">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts3">-</i><i class="final-score score3">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts4">-</i><i class="final-score score4">--</i></td>
+          <td class='final-score-container'><i class="final-pts pts5">-</i><i class="final-score score5">--</i></td>
+          <td class="total">--</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

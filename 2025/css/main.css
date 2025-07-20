@@ -9,7 +9,7 @@ body {
 #hero {
     width: 100%;
     height: auto;
-    /*background-image: url('../img/hero_bg.jpg');*/
+    background-image: url('../img/hero_bg.jpg');
     background-position: center;
     background-size: cover;
     padding-top: 100px;

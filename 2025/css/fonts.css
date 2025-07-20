@@ -1,0 +1,69 @@
+.sf_score_digit {
+    width: 30px; /* Set the width and height of your icon */
+    height: 64px;
+    display: inline-block;
+    margin-left: 4px;
+    margin-right:4px;
+    background-image: url('./../img/sf_font_score.png');
+    background-size: cover; /* This will make the image cover the entire element */
+}
+
+.bottom-scores .sf_score_digit {
+    /*width: 16px; !* Set the width and height of your icon *!*/
+    /*height: 32px;*/
+    scale: 50%;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: -5px;
+    margin-top: -12px;
+}
+
+.sf_score_digit_0 {
+    /* Set the background position to show the specific sprite */
+    background-position: 0 0; /* Adjust these values to show the correct sprite */
+}
+
+.sf_score_digit_1 {
+    /* Set the background position to show the specific sprite */
+    background-position: -32px 0; /* Adjust these values to show the correct sprite */
+}
+
+.sf_score_digit_2 {
+    /* Set the background position to show the specific sprite */
+    background-position: -64px 0; /* Adjust these values to show the correct sprite */
+}
+
+.sf_score_digit_3 {
+    /* Set the background position to show the specific sprite */
+    background-position: -96px 0; /* Adjust these values to show the correct sprite */
+}
+
+.sf_score_digit_4 {
+    /* Set the background position to show the specific sprite */
+    background-position: -128px 0; /* Adjust these values to show the correct sprite */
+}
+
+.sf_score_digit_5 {
+    /* Set the background position to show the specific sprite */
+    background-position: -160px 0; /* Adjust these values to show the correct sprite */
+}
+
+.sf_score_digit_6 {
+    /* Set the background position to show the specific sprite */
+    background-position: -192px 0; /* Adjust these values to show the correct sprite */
+}
+
+.sf_score_digit_7 {
+    /* Set the background position to show the specific sprite */
+    background-position: -224px 0; /* Adjust these values to show the correct sprite */
+}
+
+.sf_score_digit_8 {
+    /* Set the background position to show the specific sprite */
+    background-position: -256px 0; /* Adjust these values to show the correct sprite */
+}
+
+.sf_score_digit_9 {
+    /* Set the background position to show the specific sprite */
+    background-position: -288px 0; /* Adjust these values to show the correct sprite */
+}

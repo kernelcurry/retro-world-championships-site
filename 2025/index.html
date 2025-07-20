@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description"
+          content="Official site of the Retro Championships taking place April 4-6, 2025 at the Game On Expo in Phoenix, Arizona.">
+    <title>Retro Championships</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+          integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bg.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+    <!--     <script>
+            document.addEventListener('DOMContentLoaded', function(event) {
+                const getItemOffset = item => {
+                    return item.offsetTop;
+                };
+
+                const moveMarker = offset => {
+                    const marker = document.querySelector('.active-marker');
+                    marker.style.transform = `translateY(${offset}px)`;
+
+                };
+
+                const toggleActive = e => {
+                    e.preventDefault();
+
+                    // Remove any existing active classes
+                    const links = document.querySelectorAll('.vertical-menu-item');
+                    links.forEach(link => link.classList.remove('is-active'));
+
+                    // Add class to active link
+                    const activeItem = e.target.parentElement;
+                    activeItem.classList.toggle('is-active');
+                    const offset = getItemOffset(activeItem);
+                    moveMarker(offset);
+
+                    setTimeout(function() {
+                        window.open(e.target.getAttribute("href"), '_top');
+                    }, 500);
+                };
+
+                // Attach click event listener
+                const menu = document.querySelector('.vertical-menu');
+
+                menu.addEventListener('click', toggleActive);
+            })
+        </script> -->
+</head>
+<body>
+
+<div class='vertical-menu-wrapper'>
+    <ul class="vertical-menu ul--reset">
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="1" href="../index.html">2026</a>
+        </li>
+        <li class="vertical-menu-item is-active">
+            <a class="link--inverse-menu" data-vertical="2" href="index.html">2025</a>
+        </li>
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="2" href="../2024/index.html">2024</a>
+        </li>
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="3" href="../2023/index.html">2023</a>
+        </li>
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="4" href="../2022/index.html">2022</a>
+        </li>
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="5" href="../2019/index.html">2019</a>
+        </li>
+        <li class="vertical-menu-item">
+            <a class="link--inverse-menu" data-vertical="6" href="../2018/index.html">2018</a>
+        </li>
+    </ul>
+    <!-- <i class='active-marker'></i> -->
+</div>
+
+<div id="bg">
+    <div id="hero">
+        <img id="logo" class="img-fluid mx-auto d-block" src="img/logo-2025-md.png">
+        <div class="col-sm text-center">
+            <p class="h1">April 4-6, 2025</p>
+            <a href="https://www.gameonexpo.com/?utm_source=retrochampionships.com"
+               target="_blank"
+               class="btn btn-danger btn-lg active"
+               role="button"
+               aria-pressed="true">Event Tickets & Information</a>
+            <!--            <a href="qualifiers.html"-->
+            <!--               target="_blank"-->
+            <!--               class="btn btn-danger btn-lg active"-->
+            <!--               role="button"-->
+            <!--               aria-pressed="true">Qualifier Leaderboard</a>-->
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row mt-2">
+            <div class="col-sm text-center">
+                <div class="row">
+                    <div class="col-sm text-center mb-5 gold">
+                        <h2><i class="fas fa-trophy"></i> 1st Place: GameOn Expo 2025 - Retro Championships Belt</h2>
+                        <img src="img/belt.jpg" style="max-width:80%"/>
+                    </div>
+                </div>
+                <!--            <div class="row">-->
+                <!--                <div class="col-sm text-center silver">-->
+                <!--                    <h2><i class="fas fa-star"></i> Top Qualifier: Repro of the Gold 1990 Nintendo World Championships cart</h2>-->
+                <!--                    <img src="img/prize_qual.jpg" style="max-width:80%"/>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <p class="h3 mb-5 mt-5">
+                    The 2025 Retro Championships are coming again in April 2025.
+                    35 years ago the 1990 Nintendo World Championships took place so it's only fitting that this years
+                    qualifier is the 1990 NWC. This legendary cart features Super Mario Bros. , Rad Racer and Tetris in
+                    a 6 minute and 21 second marathon for the highest score. We are planning to have 6 qualifying
+                    stations this year, a 50% increase over last year. We will have a new championship belt for our
+                    overall winner but in addition to that we will have cash prizes as well.
+                    </br> </br>
+                    1st Place - $500 </br>
+                    2nd Place - $250 </br>
+                    3rd Place - $100 </br>
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg text-center">
+                <div class="card game text-center">
+                    <img class="card-img-top mx-auto d-block large-clean bg-black"
+                         src="img/nintendo-world-championships-1990.png" alt="1990 Nintendo World Championships<">
+                    <div class="card-body">
+                        <h5 class="card-title h1">Qualifier: 1990 Nintendo World Championships</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm text-center">
+                <p class="h3 mb-5 mt-5">
+                    As usual our top 8 qualifying scores will compete on Sunday in our Championship gauntlet consisting
+                    of
+                    1991 and 1992 Campus Challenge, StarFox Super Weekend, 1994 Powerfest and Donkey Kong Country
+                    Competition. The 8th place qualifier will play first while the top qualifier will play last.
+                    Qualifiers
+                    will play each game and earn points based on where they place overall in each game. 8 points for the
+                    top
+                    score and 1 point for the lowest.
+                </p>
+                <p class="h3 mb-5 mt-5">
+                    We celebrate our 10th anniversary of Game On Expo and the Retro Championships in 2025 and we want to
+                    make it bigger and better than it ever has been. We're very excited to see some returning faces this
+                    year as well as some new ones.
+                </p>
+                <p class="h3 mb-5 mt-5">
+                    Get practicing and we'll see you in April!
+                </p>
+            </div>
+        </div>
+
+        <!--
+            <div class="row mt-5">
+                <div class="col-sm">
+                    <div class="card game text-center">
+                        <img class="card-img-top mx-auto d-block" src="img/1992ChallengeSuperMarioWorldTitle.png"
+                             alt="Daytona USA (Sega Saturn)">
+                        <div class="card-body">
+                            <h5 class="card-title">Game 1 - Super Mario World</h5>
+                            <p class="card-text">Yoshi's Island 1/2 - Collect 50 coins</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card game text-center">
+                        <img class="card-img-top  mx-auto d-block" src="img/1992ChallengeFZeroTitle.png" alt="Viewpoint (Neo Geo)">
+                        <div class="card-body">
+                            <h5 class="card-title">Game 2 - F-Zero</h5>
+                            <p class="card-text">Mute City I - 2 Laps</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card game text-center">
+                        <img class="card-img-top  mx-auto d-block" src="img/1992ChallengePilotwingsTitle.png" alt="Tony Hawk's Pro Skater (Playstation)">
+                        <div class="card-body">
+                            <h5 class="card-title">Game 3 - Pilot Wings</h5>
+                            <p class="card-text">Successful Landings - Highest Score</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+    </div>
+</div>
+</body>
+</html>
+

@@ -5,6 +5,80 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
 
+.event-section {
+    position: relative;
+    margin-top: 4rem;
+    padding: clamp(2rem, 4vw, 3.5rem);
+    border: 3px solid transparent;
+    border-radius: 32px;
+    background: rgba(4, 8, 28, 0.88);
+    border-image: linear-gradient(120deg, #6ef3ff, #8d64ff, #ff5cf0) 1;
+    box-shadow: 0 25px 45px rgba(6, 12, 40, 0.65), 0 0 30px rgba(102, 255, 255, 0.25), inset 0 0 50px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    animation: pulse-border 8s ease-in-out infinite;
+}
+
+.event-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 20%, rgba(110, 243, 255, 0.35), transparent 40%), radial-gradient(circle at 80% 30%, rgba(255, 92, 240, 0.3), transparent 45%), url("../img/bg.gif");
+    background-size: 200% 200%, 200% 200%, cover;
+    mix-blend-mode: screen;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.event-section > * {
+    position: relative;
+}
+
+.event-section h2,
+.event-section h3 {
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #e6f9ff;
+    text-shadow: 0 0 8px rgba(111, 255, 255, 0.8);
+}
+
+.event-section .h5 {
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+#qualifiers {
+    border-image: linear-gradient(130deg, #ffc857, #ff7b00) 1;
+    box-shadow: 0 0 35px rgba(255, 200, 87, 0.35);
+}
+
+#bonus-tournament {
+    border-image: linear-gradient(130deg, #57ffe7, #3494ff) 1;
+    box-shadow: 0 0 35px rgba(52, 148, 255, 0.35);
+}
+
+#finals {
+    border-image: linear-gradient(130deg, #ff5cf0, #ff3063) 1;
+    box-shadow: 0 0 35px rgba(255, 92, 240, 0.35);
+}
+
+.prize-block {
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    background: rgba(15, 20, 48, 0.9);
+    box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.08), 0 0 25px rgba(0, 255, 255, 0.25);
+}
+
+@keyframes pulse-border {
+    0%, 100% {
+        box-shadow: 0 25px 45px rgba(6, 12, 40, 0.65), 0 0 30px rgba(102, 255, 255, 0.25), inset 0 0 50px rgba(255, 255, 255, 0.05);
+    }
+    50% {
+        box-shadow: 0 30px 55px rgba(6, 12, 40, 0.75), 0 0 45px rgba(255, 92, 240, 0.45), inset 0 0 65px rgba(255, 255, 255, 0.08);
+    }
+}
+
 /*ID*/
 #hero {
     width: 100%;

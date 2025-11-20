@@ -43,9 +43,24 @@ body {
     text-shadow: 0 0 8px rgba(111, 255, 255, 0.8);
 }
 
+.event-section strong,
+.label-key {
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #fef7d4;
+}
+
 .event-section .h5 {
     letter-spacing: 0.04em;
     text-transform: uppercase;
+}
+
+.event-section ul p {
+    font-size: 0.95rem;
+    margin-left: 0.75rem;
 }
 
 #qualifiers {

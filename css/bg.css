@@ -2,10 +2,4 @@ body {
     color: black;
     background-image: url("../img/bg.gif");
     background-color: #324569;
-
-}
-
-body.qualifier,
-#finals-page {
-    background-color: black;
 }
